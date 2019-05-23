@@ -1,0 +1,156 @@
+@import "photon-colors/photon-colors.css";
+
+@import "./styles/button.css";
+@import "./styles/card.css";
+@import "./styles/checkbox.css";
+@import "./styles/field.css";
+@import "./styles/link.css";
+@import "./styles/select.css";
+@import "./styles/typography.css";
+
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Add missing Photon variables */
+    --grey-10-a05: rgba(249, 249, 250, 0.05);
+    --grey-10-a30: rgba(249, 249, 250, 0.3);
+    --grey-10-a50: rgba(249, 249, 250, 0.5);
+    --grey-10-a70: rgba(249, 249, 250, 0.7);
+    --grey-10-a90: rgba(249, 249, 250, 0.9);
+
+    --shadow-10: 0 1px 4px rgba(12, 12, 13, 0.1);
+    --shadow-20: 0 2px 8px rgba(12, 12, 13, 0.1);
+    --shadow-30: 0 4px 16px rgba(12, 12, 13, 0.1);
+
+
+    --__photon__focus_box_shadow:
+            0 0 0 1px #0a84ff inset
+          , 0 0 0 1px #0a84ff
+          , 0 0 0 4px rgba(10, 132, 255, 0.3);
+
+    --__photon__box_background: var(--white-100);
+    --__photon__separator_background: var(--grey-90-a20);
+
+    --__photon__link_color: var(--blue-60);
+    --__photon__link_color_hover: var(--blue-60);
+    --__photon__link_color_active: var(--blue-70);
+
+    --__photon__button_background: var(--grey-90-a10);
+    --__photon__button_background_hover: var(--grey-90-a20);
+    --__photon__button_background_active: var(--grey-90-a30);
+    --__photon__button_background_primary: var(--blue-60);
+    --__photon__button_background_primary_hover: var(--blue-70);
+    --__photon__button_background_primary_active: var(--blue-80);
+    --__photon__button_background_ghost: transparent;
+    --__photon__button_background_ghost_hover: var(--grey-90-a10);
+    --__photon__button_background_ghost_active: var(--grey-90-a20);
+    --__photon__button_color: var(--grey-90);
+    --__photon__button_color_primary: var(--white-100);
+    --__photon__button_color_ghost: var(--grey-90-a80);
+
+    --__photon__select_background_image: url("assets/dropdown_dark.svg");
+
+    --__photon__checkbox_background: var(--white-100);
+    --__photon__checkbox_border_color: var(--grey-90-a30);
+    --__photon__checkbox_border_color_hover: var(--blue-50);
+
+    --__photon__field_background: var(--__photon__box_background);
+    --__photon__field_background_image_search: url("assets/search_dark.svg");
+    --__photon__field_color: var(--__photon__typography_color_primary);
+    --__photon__field_placeholder_color: var(--grey-50);
+    --__photon__field_border_color: var(--grey-90-a20);
+    --__photon__field_border_color_hover: var(--grey-90-a30);
+    --__photon__field_box_shadow_focus: var(--__photon__focus_box_shadow);
+    --__photon__field_box_shadow_warning:
+            0 0 0 1px #d7b600
+          , 0 0 0 4px rgba(215, 182, 0, 0.3);
+    --__photon__field_box_shadow_error:
+            0 0 0 1px #d70022
+          , 0 0 0 4px rgba(251, 0, 34, 0.3);
+
+    --__photon__card_background: var(--__photon__box_background);
+    --__photon__card_border: 5px solid transparent;
+    --__photon__card_border-color_hover: var(--grey-30);
+    --__photon__card_border-radius: 4px;
+    --__photon__card_box-shadow: var(--shadow-10);
+
+    --__photon__typography_scale_display20_size: 36px;
+    --__photon__typography_scale_display20_weight: 100;
+    --__photon__typography_scale_title30_size: 22px;
+    --__photon__typography_scale_title30_weight: 300;
+    --__photon__typography_scale_title20_size: 17px;
+    --__photon__typography_scale_title20_weight: 600;
+    --__photon__typography_scale_title10_size: 13px;
+    --__photon__typography_scale_title10_weight: 500;
+    --__photon__typography_scale_body20_size: 15px;
+    --__photon__typography_scale_body20_weight: 400;
+    --__photon__typography_scale_body10_size: 13px;
+    --__photon__typography_scale_body10_weight: 400;
+    --__photon__typography_scale_caption20_size: 13px;
+    --__photon__typography_scale_caption20_weight: 400;
+    --__photon__typography_scale_caption10_size: 11px;
+    --__photon__typography_scale_caption10_weight: 400;
+    --__photon__typography_scale_emphasised_weight: 700;
+    --__photon__typography_color_primary: var(--grey-90);
+    --__photon__typography_color_secondary: var(--grey-50);
+}
+
+body {
+    background-color: var(--grey-10);
+
+    /* Primary typography color */
+    color: var(--__photon__typography_color_primary);
+
+    /* Body 20 */
+    font: message-box;
+    font-size: var(--__photon__typography_scale_body20_size);
+    font-weight: var(--__photon__typography_scale_body20_weight);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --__photon__box_background: #202023;
+        --__photon__separator_background: var(--grey-10-a30);
+
+        --__photon__link_color: var(--blue-50);
+        --__photon__link_color_hover: var(--blue-50);
+        --__photon__link_color_active: var(--blue-60);
+
+        --__photon__button_background: var(--grey-10-a10);
+        --__photon__button_background_hover: rgba(249, 249, 250, 0.15);
+        --__photon__button_background_active: rgba(249, 249, 250, 0.2);
+        --__photon__button_background_ghost_hover: rgba(249, 249, 250, 0.1);
+        --__photon__button_background_ghost_active: rgba(249, 249, 250, 0.15);
+        --__photon__button_color: var(--white-100);
+        --__photon__button_color_ghost: var(--grey-10-a80);
+
+        --__photon__select_background_image: url("assets/dropdown_light.svg");
+
+        --__photon__checkbox_background: var(--grey-90-a20);
+        --__photon__checkbox_border_color: var(--grey-10-a20);
+
+        --__photon__field_background_image_search: url("assets/search_light.svg");
+        --__photon__field_placeholder_color: var(--grey-30);
+        --__photon__field_border_color: var(--grey-10-a20);
+        --__photon__field_border_color_hover: var(--grey-10-a30);
+
+        --__photon__card_border-color_hover: var(--grey-60);
+
+        --__photon__typography_color_primary: var(--white-100);
+        --__photon__typography_color_secondary: var(--grey-10);
+    }
+
+    body {
+        background-color: var(--grey-80);
+    }
+}
+
+
+hr.separator {
+    border-color: var(--__photon__separator_background);
+    border-bottom: 0;
+    border-right: 0;
+}

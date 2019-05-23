@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../dist/photon.css">
+        <style>
+            .hbox,
+            .vbox {
+                align-items: start;
+                display: flex;
+                gap: 1em;
+            }
+            .hbox { flex-direction: row; }
+            .vbox { flex-direction: column; }
+            hr { margin: initial; }
+            .hbox > hr { height: 100%; }
+            .vbox > hr { width: 100%; }
+
+        </style>
+    </head>
+    <body>
+        <div class="vbox">
+            <div class="hbox">
+                <div class="vbox">
+                    <button class="button button--primary">Test</button>
+                    <button class="button button--primary" disabled>Disabled</button>
+                </div>
+                <div class="vbox">
+                    <button class="button">Test</button>
+                    <a href="#" class="button" disabled>Test</a>
+                </div>
+                <div class="vbox">
+                    <button class="button button--puffy">Puffy Size</button>
+                    <button class="button button--micro">Micro Size</button>
+                </div>
+            </div>
+            <hr class="separator">
+            <div class="hbox">
+                <div class="vbox">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        Checkbox 1
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        Checkbox 2
+                    </label>
+                </div>
+                <hr class="separator">
+                <div class="vbox">
+                    <label class="radio">
+                        <input type="radio" name="radio">
+                        Radio 1
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="radio">
+                        Radio 2
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="radio">
+                        Radio 3
+                    </label>
+                </div>
+            </div>
+            <hr class="separator">
+            <div class="hbox">
+                <div class="vbox">
+                    <input class="field" type="text" placeholder="Placeholder">
+                    <input class="field" type="search" placeholder="Search...">
+                </div>
+                <div class="vbox">
+                    <label class="field">
+                        Label
+                        <input type="text">
+                    </label>
+                    <label class="field">
+                        Required Field
+                        <input type="text" required>
+                    </label>
+                    <label class="field">
+                        Password
+                        <input type="password">
+                    </label>
+                </div>
+            </div>
+            <hr class="separator">
+            <div class="hbox">
+                <div class="card">
+                    <div class="typography--title-30">Card 1</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia delectus repellendus, ratione, aut ea veritatis optio temporibus ab, doloremque voluptate dolor quam facilis ipsa excepturi architecto cumque consequuntur. Possimus, aspernatur!</p>
+                </div>
+                <div class="card">
+                    <div class="typography--title-30">Card 2</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum possimus perspiciatis maxime deserunt, optio atque nostrum itaque sequi eos, pariatur recusandae aperiam consequatur, totam cumque modi! Numquam possimus, atque impedit.</p>
+                </div>
+                <div class="card">
+                    <div class="typography--title-30">Card 3</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam consequuntur ab, fugit voluptates, minima nulla quod iure commodi molestiae voluptas voluptatibus doloribus aspernatur, pariatur neque sunt! Consequatur, odio quaerat doloribus?</p>
+                </div>
+                <div class="card">
+                    <div class="typography--title-30">Card 4</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus itaque magni accusamus possimus commodi ex distinctio ullam provident esse veritatis, alias earum, nemo voluptates nobis autem quod sunt! Rem, consequuntur!</p>
+                </div>
+            </div>
+            <hr class="separator">
+            <div class="hbox">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+            </div>
+            <hr class="separator">
+            <div class="vbox">
+                <select class="select">
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                </select>
+                <select class="select">
+                    <option value="">Some long option</option>
+                    <option value="">Some longer option</option>
+                    <option value="">Some even longer option</option>
+                </select>
+            </div>
+            <hr class="separator">
+            <div class="vbox" style="gap: 8px">
+                <div class="typography--title-30">Files and Applications</div>
+                <div class="typography--title-20">Downloads</div>
+                <div class="hbox" style="align-items: center;">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        Save files to
+                    </label>
+                    <input type="text" class="field" placeholder="Downloads">
+                    <button class="button">Choose</button>
+                </div>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    Always ask you where to save files
+                </label>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+.card {
+    background-color: var(--__photon__card_background);
+    border: var(--__photon__card_border);
+    border-radius: var(--__photon__card_border-radius);
+    box-shadow: var(--__photon__card_box-shadow);
+    padding: 16px;
+}
+
+.card--large {
+    padding: 20px;
+}
+
+.card:hover,
+.card[open] {
+    border-color: var(--__photon__card_border-color_hover);
+}

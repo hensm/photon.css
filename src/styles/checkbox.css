@@ -1,0 +1,66 @@
+input[type="checkbox"].checkbox,
+label.checkbox > input[type="checkbox"],
+input[type="radio"].radio,
+label.radio > input[type="radio"] {
+    -moz-appearance: none;
+    background-color: var(--__photon__checkbox_background);
+    border: 1px solid var(--__photon__checkbox_border_color);
+    height: 20px;
+    margin: initial;
+    vertical-align: middle;
+    width: 20px;
+}
+
+input[type="checkbox"].checkbox,
+label.checkbox > input[type="checkbox"] {
+    border-radius: 2px;
+}
+
+input[type="radio"].radio,
+label.radio > input[type="radio"] {
+    border-radius: 100%;
+}
+
+input[type="checkbox"].checkbox:hover,
+label.checkbox > input[type="checkbox"]:hover,
+input[type="radio"].radio:hover,
+label.radio > input[type="radio"]:hover {
+    border-color: var(--__photon__checkbox_border_color_hover);
+}
+
+input[type="checkbox"].checkbox:focus,
+label.checkbox > input[type="checkbox"]:focus,
+input[type="radio"].radio:focus,
+label.radio > input[type="radio"]:focus {
+    box-shadow: var(--__photon__focus_box_shadow);
+    border: initial;
+}
+
+input[type="checkbox"].checkbox:checked,
+label.checkbox > input[type="checkbox"]:checked,
+input[type="radio"].radio:checked,
+label.radio > input[type="radio"]:checked {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+input[type="checkbox"].checkbox:checked,
+label.checkbox > input[type="checkbox"]:checked {
+    background-image: url("../assets/check.svg");
+}
+
+input[type="radio"].radio:checked,
+label.radio > input[type="radio"]:checked {
+    background-image: url("../assets/radio.svg");
+}
+
+label.checkbox,
+label.radio {
+    align-items: center;
+    display: inline-flex;
+}
+
+label.checkbox > input[type="checkbox"],
+label.radio > input[type="radio"] {
+    margin-right: 8px;
+}

@@ -1,0 +1,17 @@
+a:not(.button) {
+    color: var(--__photon__link_color);
+    text-decoration: none;
+}
+
+a:not(.button):hover {
+    color: var(--__photon__link_color_hover);
+    text-decoration: underline;
+}
+
+a:not(.button):hover:active {
+    color: var(--__photon__link_color_active);
+}
+
+a:not(.button):focus {
+    box-shadow: var(--__photon__focus_box_shadow);
+}

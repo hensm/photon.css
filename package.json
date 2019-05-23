@@ -1,0 +1,10 @@
+{
+    "license": "MIT",
+    "scripts": {
+        "build": "parcel build src/main.css --public-url . --out-file photon.css"
+    },
+    "devDependencies": {
+        "parcel": "^1.12.3",
+        "photon-colors": "^3.3.2"
+    }
+}

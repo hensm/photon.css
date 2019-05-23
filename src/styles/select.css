@@ -1,0 +1,36 @@
+.select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: var(--__photon__select_background_image);
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    border: initial;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 20px var(--__photon__button_background);
+    color: var(--__photon__button_color);
+    font-size: inherit;
+    font-weight: 400;
+    height: 32px;
+    padding-inline-end: 36px;
+    padding-inline-start: 8px;
+}
+
+.select:not(:disabled):not([disabled]):focus {
+    color: transparent;
+    box-shadow: var(--__photon__focus_box_shadow);
+    outline: none;
+    text-shadow: 0 0 0 var(--__photon__button_color);
+}
+
+.select:not(:disabled):not([disabled]):hover {
+    box-shadow: inset 0 0 0 20px var(--__photon__button_background_hover);
+}
+.select:not(:disabled):not([disabled]):hover:active {
+    box-shadow: inset 0 0 0 20px var(--__photon__button_background_active);
+}
+
+.select > option {
+    color: initial;
+}

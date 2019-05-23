@@ -1,0 +1,238 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../dist/photon.css">
+        <style>
+            body {
+                width: 650px;
+                padding: 20px;
+                margin: initial;
+            }
+
+            .category {
+                margin-bottom: 32px;
+            }
+
+            .category__title {
+                font-size: var(--__photon__typography_scale_title30_size);
+                font-weight: var(--__photon__typography_scale_title30_weight);
+                margin-bottom: 8px;
+            }
+
+            .category__description {
+                color: #737373;
+                margin-bottom: 8px;
+            }
+
+            .category > .category > .category__title {
+                font-size: var(--__photon__typography_scale_title20_size);
+                font-weight: var(--__photon__typography_scale_title20_weight);
+                margin-bottom: 4px;
+                margin-top: 16px;
+                line-height: 1.8em;
+            }
+
+            .category ~ .category {
+                border-top: 1px solid var(--__photon__separator_background);
+                margin-top: 16px;
+                padding-top: 16px;
+            }
+
+            .category > .category ~ .category {
+                border-top: initial;
+                padding-top: initial;
+            }
+
+            .option {
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+                margin: 2px 0;
+            }
+            .option__control {
+                align-items: center;
+                display: flex;
+                gap: 8px;
+                min-height: 30px;
+            }
+            .option__control.checkbox > input[type="checkbox"],
+            .option__control.radio > input[type="radio"] {
+                margin: initial;
+            }
+            .option__description {
+                color: #737373;
+                font-size: 0.8em;
+                margin-bottom: 3px;
+                margin-top: 3px;
+                max-width: 75ch;
+            }
+
+            .indent {
+                margin-left: 28px;
+            }
+
+            .radio-cards {
+                align-items: start;
+                display: flex;
+                gap: 16px;
+            }
+
+            .radio-card {
+                flex: 1;
+                position: relative;
+            }
+
+            .radio-card--selected {
+                border-color: var(--blue-50);
+                border-width: 2px;
+                padding: 19px;
+            }
+
+            .buttons {
+                justify-content: end;
+                display: flex;
+                gap: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="category">
+            <div class="category__title">Media Casting</div>
+            <div class="category__description">HTML5 video/audio media casting.</div>
+
+            <div class="option">
+                <label class="option__control checkbox">
+                    <input type="checkbox" checked>
+                    Media casting enabled
+                </label>
+            </div>
+            <div class="option">
+                <label class="option__control checkbox">
+                    <input type="checkbox">
+                    Sync receiver state with media element
+                </label>
+                <div class="option__description indent">
+                    Update the playback, seek and volume state as the receiver state updates.
+                </div>
+            </div>
+            <div class="option">
+                <label class="option__control checkbox">
+                    <input type="checkbox">
+                    Stop receiver playback on page unload
+                </label>
+            </div>
+
+            <div class="category">
+                <div class="category__title">Local Media</div>
+
+                <div class="option">
+                    <label class="option__control checkbox">
+                        <input type="checkbox" checked>
+                        Local media casting enabled
+                    </label>
+                    <div class="option__description indent">
+                        HTTP server started by the bridge app to stream local media to the cast receiver.
+                    </div>
+                </div>
+                <div class="option">
+                    <label class="option__control">
+                        HTTP server port
+                        <input class="field" type="number" value="9995">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="category">
+            <div class="category__title">Screen Mirroring</div>
+            <div class="category__description">
+                Screen/Tab mirroring to a Chromecast reciever app.
+            </div>
+
+            <div class="option">
+                <label class="option__control checkbox">
+                    <input type="checkbox" checked>
+                    Screen mirroring enabled
+                </label>
+            </div>
+            <div class="option">
+                <label class="option__control">
+                    Receiver app ID
+                    <input class="field" type="text" value="19A6F4AE">
+                </label>
+            </div>
+        </div>
+        <div class="category">
+            <div class="category__title">Receiver Selector</div>
+
+            <div class="category">
+                <div class="category__title">UI Type</div>
+
+                <div class="radio-cards">
+                    <label class="option card radio-card" for="radio1">
+                        <label class="option__control radio">
+                            <input type="radio" name="1" id="radio1">
+                            Browser
+                        </label>
+                        <div class="option__description indent">
+                            The default HTML UI. Opens in a browser window popup.
+                        </div>
+
+                        <div class="option indent">
+                            <label class="option__control checkbox">
+                                <input type="checkbox" checked>
+                                Use Firefox style
+                            </label>
+                            <div class="option__description indent">
+                                Use Firefox's Photon UI style.
+                            </div>
+                        </div>
+                    </label>
+                    <label class="option card radio-card radio-card--selected">
+                        <label class="option__control radio" for="radio2">
+                            <input type="radio" name="1" id="radio2">
+                            Native
+                        </label>
+                        <div class="option__description indent">
+                            Currently macOS only, provided with the bridge app. Uses platform-native UI components for better integration.
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category__title">Behaviour</div>
+
+                <div class="option">
+                    <label class="option__control checkbox">
+                        <input type="checkbox">
+                        Keep open while connecting
+                    </label>
+                </div>
+                <div class="option">
+                    <label class="option__control checkbox">
+                        <input type="checkbox">
+                        Close after losing focus
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="category">
+            <div class="category__title">User Agent Whitelist</div>
+            <div class="category__description">
+                Sites for which to replace the user agent string with a Chrome version for compatibility. Must be valid match patterns.
+            </div>
+
+            <div class="option">
+                <label class="option__control checkbox">
+                    <input type="checkbox" checked>
+                    User agent whitelist enabled
+                </label>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button">Restore Defaults</button>
+            <button class="button button--primary">Save</button>
+        </div>
+    </body>
+</html>
